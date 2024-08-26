@@ -1,1 +1,58 @@
+//Q1
+#include<iostream>
+using namespace std;
+int main() {
+    int num1, num2;
+    cout << "Enter first integer: ";
+    cin >> num1;
+    cout << "Enter second integer: ";
+    cin >> num2;
+    cout << "Addition: " << num1 + num2 << endl;
+    cout << "Subtraction: " << num1 - num2 << endl;
+    cout << "Multiplication: " << num1 * num2 << endl;
+    if (num2 == 0) {
+        cout << "Error: Division by zero is undefined." << endl;
+    } else {
+        cout << "Division: "<< (double)num1 / num2 << endl;
+    }
+    cout << "Modulus: " << num1 % num2;
+}
 
+//Q2
+#include<iostream>
+using namespace std;
+class Complex {
+public:
+    double real;
+    double imag;
+};
+int main() {
+    int n;
+    cout << "Enter the number of complex numbers: ";
+    cin >> n;
+    Complex *c = new Complex[n];
+    for (int i = 0; i < n; i++) {
+        cout << "Enter real part of complex number " << i + 1 << ": ";
+        cin >> c[i].real;
+        cout << "Enter imaginary part of complex number " << i + 1 << ": ";
+        cin >> c[i].imag;
+    }
+    for (int i = 0; i < n; i++) {
+        cout << "Complex Number " << i + 1 << ": " << c[i].real << " + " << c[i].imag << "i" << endl;
+    }
+    Complex sum,diff;
+    sum.real = 0;
+    sum.imag = 0;
+    diff.real = 0;
+    diff.imag = 0;
+    for (int i = 0; i < n; i++) {
+        sum.real += c[i].real;
+        sum.imag += c[i].imag;
+    }
+    diff.real = c[0].real - c[1].real;
+    diff.imag = c[0].imag - c[1].imag;
+  
+    
+    cout << "Sum: " << sum.real << " + " << sum.imag << "i"<<endl ;
+    cout << "Difference: " << diff.real << " + " << diff.imag << "i";
+}
