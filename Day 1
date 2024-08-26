@@ -9,3 +9,24 @@ int main(){
     cin>>b;
     cout<<"Concatenated string: "<<a+b;
 }
+
+//Q2
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b,c,d,e;
+    double x;
+    cout<<"Enter grade 1: ";
+    cin>>a;
+    cout<<"Enter grade 2: ";
+    cin>>b;
+    cout<<"Enter grade 3: ";
+    cin>>c;
+    cout<<"Enter grade 4: ";
+    cin>>d;
+    cout<<"Enter grade 5: ";
+    cin>>e;
+    x=(double)(a+b+c+d+e)/5;
+    cout<<"The average grade is: "<<x;
+}
+
