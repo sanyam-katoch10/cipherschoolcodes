@@ -30,3 +30,12 @@ int main(){
     cout<<"The average grade is: "<<x;
 }
 
+//Q3
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"Enter a number: ";
+    cin>>n;
+    cout<<"The square of "<<n<<" is: "<<n*n;
+}
